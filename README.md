@@ -23,15 +23,47 @@ From the local environment, you can enter with password authentication, while fr
 
 3. Send the authorized_keys (__on your PC__)
     ```
-    scp -P <port> ~/.ssh/id_rsa.pub <username>@<address>:~/.ssh/authorized_keys
+    scp -P <port> C:\Users\nutan\.ssh\id_rsa.pub <username>@<address>:~/.ssh/authorized_keys
     ```
 
 4. Change the permissions of authorized_keys __on the server__.
     ```
-    chmod 600 authorized_keys
+    chmod 600 .ssh/authorized_keys
     ```
 
 ## Connecting with VScode
+
+1.  Edit your "~/.ssh/config" file
+    
+    Add this host to config file
+    ```
+    Host fujimakilab
+        HostName <address>
+        User <username>
+        Port <port>
+        UserKnownHostsFile /dev/null
+        PasswordAuthentication no
+        IdentityFile C:\Users\<username>\.ssh\id_rsa
+        IdentitiesOnly yes
+        ForwardAgent yes
+        ForwardX11 yes
+        ForwardX11Trusted yes
+        ForwardX11Timeout 596h
+        ServerAliveInterval 300
+        ServerAliveCountMax 5
+    ```
+2.  install VScode extention "Remote - SSH"
+
+3.  Press the green button in the bottom left corner of VScode
+
+4.  Select the "Connect to Host" and "Host fujimakilab"
+
+
+
+## Docker Container
+
+### __Simulation__
+I will write this session.
 
 
 ## Environment
