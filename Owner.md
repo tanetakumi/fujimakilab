@@ -11,5 +11,11 @@ Match Address 10.8.128.0/24
 sudo adduser <username>
 ```
 
+## Management the version of python, pip
+I will use poetry.
+
+
+
+
 ## I want to control the docker deamon in remote server.
 I will discribe it to below.
