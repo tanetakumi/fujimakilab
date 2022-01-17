@@ -14,6 +14,10 @@ sudo adduser <username>
 ## Management the version of python, pip
 I will use poetry.
 
+create symbolic link
+```
+ln -s <basepath> <createpath>
+```
 
 
 
